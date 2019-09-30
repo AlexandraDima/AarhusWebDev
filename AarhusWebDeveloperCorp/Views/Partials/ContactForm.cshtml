@@ -7,6 +7,8 @@
     Html.EnableUnobtrusiveJavaScript();
 }
 
+@*Adding contact form*@
+
 @if (TempData["success"] == null)
 { 
     using (Html.BeginUmbracoForm("HandleFormSubmit", "ContactFormSurface", new object { }, new { @class = "form-horizontal" }))
