@@ -1,0 +1,53 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.ArticlesMain>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+	Layout = "master.cshtml";
+}
+
+
+@{
+	var selection = Umbraco.Content(Guid.Parse("ddd8a705-7c01-4b27-a81f-ff352b2d8232"))
+    .ChildrenOfType("articlesItem")
+    .Where(x => x.IsVisible())
+    .OrderByDescending(x => x.CreateDate);
+}
+
+
+ <!-- Header -->
+    <header class="masthead" style=" background-image: url('../Content/Images/home-bg.jpg')">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-10 mx-auto">
+                        <div class="site-heading">
+                            <h1>@Model.Value("articlesTitle")</h1>
+                         
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+          
+          @Html.Partial("ListBlogItems")
+   @*       
+       <ul>
+	@foreach (var item in selection)
+	{
+		<li>
+			<a href="@item.Url">@item.Name</a>
+		</li>
+	}
+        </ul>
+        *@
+        </div>
+       
+        </div>
+         </div>
+        <hr>
+        

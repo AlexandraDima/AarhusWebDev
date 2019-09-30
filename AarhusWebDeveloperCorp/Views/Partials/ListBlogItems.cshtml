@@ -1,0 +1,39 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+
+@{
+	var selection = Umbraco.Content(Guid.Parse("ddd8a705-7c01-4b27-a81f-ff352b2d8232"))
+    .ChildrenOfType("articlesItem")
+    .Where(x => x.IsVisible())
+    .OrderBy(x => x.CreateDate);
+}
+
+	@foreach (var item in selection)
+	{
+	     <!-- post -->
+              <div class="post col-xl-6">
+                <div class="post-thumbnail">
+                    <a href="@item.Url">
+                @{
+                var articleImage = item.Value<IPublishedContent>("articleImage");
+                if (articleImage != null)
+                {
+                   
+                     <img src="@articleImage.Url" alt="@articleImage.Url" class="img-fluid">
+                }
+                }
+
+                </a>
+                </div>
+                <div class="post-details">
+                  <div class="post-meta d-flex justify-content-between">
+                   <a href="@item.Url">
+                    <h3 class="h4">@item.Name</h3></a>
+                    <p class="text-muted">@item.Value("articleTeaser")</p>
+                  </div>
+                
+                </div>
+              </div>
+		
+		
+	}
+

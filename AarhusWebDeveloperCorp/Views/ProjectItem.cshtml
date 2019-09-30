@@ -1,0 +1,44 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.ProjectItem>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+    Layout = "master.cshtml";
+}
+
+
+<!-- Page Header -->
+<header class="mastheadPost" style="background-color:#03387C">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="post-heading">
+                    <h1>@Model.Value("projectTitle")</h1>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post description -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 p-5 mx-auto bg-light">
+                @Model.Value("projectDescription")
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- Post layout -- -->
+
+ 
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 pb-3 mx-auto">
+        @Html.GetGridHtml(Model, "ProjectContent")
+        </div>
+    </div>
+</div>

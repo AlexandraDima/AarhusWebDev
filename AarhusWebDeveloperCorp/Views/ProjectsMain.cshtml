@@ -1,0 +1,52 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.ProjectsMain>
+@using ContentModels = Umbraco.Web.PublishedModels;
+
+@{
+    Layout = "master.cshtml";
+}
+
+
+@{
+	var selection = Umbraco.Content(Guid.Parse("2fe42133-f360-40cc-a800-547a8e7baac1"))
+    .ChildrenOfType("projectItem")
+    .Where(x => x.IsVisible())
+    .OrderByDescending(x => x.CreateDate);
+}
+
+
+ <!-- Header -->
+   <header class="masthead" style=" background-image: url('../Content/Images/home-bg.jpg')">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-10 mx-auto">
+                        <div class="site-heading">
+                            <h1>@Model.Value("projectsTitle")</h1>
+                            <p>@Model.ProjectsBodyText</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </header>
+    
+ <!-- Main Content -->
+
+     
+         <div class="container">
+        <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+   @Html.Partial("ListNewestProjects")
+   
+  @* Binding error when i call the Macro Partial view
+  @Umbraco.RenderMacro("listNewestProjects")*@
+             
+        </div>
+        </div>
+       </div>
+    </div>
+
+
+
+

@@ -1,0 +1,110 @@
+﻿.navbar-dark .navbar-nav .nav-link {
+    color: black;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.features-icons {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+    .features-icons .features-icons-item {
+        max-width: 20rem;
+    }
+
+        .features-icons .features-icons-item .features-icons-icon {
+            height: 7rem;
+        }
+
+            .features-icons .features-icons-item .features-icons-icon i {
+                font-size: 4.5rem;
+            }
+
+        .features-icons .features-icons-item:hover .features-icons-icon i {
+            font-size: 5rem;
+        }
+
+
+.showcase .showcase-text {
+    padding: 3rem;
+}
+
+.showcase .showcase-img {
+    min-height: 30rem;
+    background-size: cover;
+}
+
+@media (min-width: 768px) {
+    .showcase .showcase-text {
+        padding: 7rem;
+    }
+}
+
+header.masthead {
+    background: no-repeat center center;
+    background-color: #868e96;
+    background-attachment: scroll;
+    position: relative;
+    background-size: cover;
+    height: 500px;
+}
+
+header.mastheadPost {
+    height: 300px;
+}
+header.mastheadPost {
+    padding: 130px 0 150px;
+    color: white;
+}
+
+    header.masthead .page-heading,
+    header.masthead .post-heading,
+    header.masthead .site-heading {
+        padding: 200px 0 150px;
+        color: white;
+    }
+
+@media only screen and (min-width: 768px) {
+    header.masthead .page-heading,
+    header.masthead .post-heading,
+    header.masthead .site-heading {
+        padding: 200px 0;
+    }
+}
+
+header.masthead .page-heading,
+header.masthead .site-heading {
+    text-align: center;
+}
+
+    header.masthead .page-heading h1,
+    header.masthead .site-heading h1 {
+        font-size: 50px;
+        margin-top: 0;
+    }
+
+    header.masthead .page-heading .subheading,
+    header.masthead .site-heading .subheading {
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 1.1;
+        display: block;
+        margin: 10px 0 0;
+        font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+
+header.masthead .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #212529;
+    opacity: 0.5;
+}
