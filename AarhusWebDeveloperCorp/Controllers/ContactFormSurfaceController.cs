@@ -46,6 +46,7 @@ namespace AarhusWebDeveloperCorp.Controllers
                 smtp.UseDefaultCredentials = false;
                 smtp.EnableSsl = true; smtp.Host = "smtp.gmail.com";
                 smtp.Port = 587;
+                //Removed Network credentials 
                 smtp.Credentials = new System.Net.NetworkCredential("", "");
                 // send mail 
                 smtp.Send(message);
