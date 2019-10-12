@@ -19,7 +19,7 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "f0e987e5736f03e9")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "4cde2bba52649f37")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 namespace Umbraco.Web.PublishedModels
@@ -57,25 +57,11 @@ namespace Umbraco.Web.PublishedModels
 		public string Footer => this.Value<string>("footer");
 
 		///<summary>
-		/// Logo
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("logo")]
-		public IPublishedContent Logo => this.Value<IPublishedContent>("logo");
-
-		///<summary>
 		/// Main Content
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("mainContent")]
 		public IHtmlString MainContent => this.Value<IHtmlString>("mainContent");
-
-		///<summary>
-		/// Site Sub-heading: Sub-heading of the homepage
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("siteSubHeading")]
-		public string SiteSubHeading => this.Value<string>("siteSubHeading");
 
 		///<summary>
 		/// Site Title
@@ -226,7 +212,7 @@ namespace Umbraco.Web.PublishedModels
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("articleTeaser")]
-		public string ArticleTeaser => this.Value<string>("articleTeaser");
+		public IHtmlString ArticleTeaser => this.Value<IHtmlString>("articleTeaser");
 
 		///<summary>
 		/// Article Title: The title of the article
@@ -491,7 +477,7 @@ namespace Umbraco.Web.PublishedModels
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("textPageContent")]
-		public IHtmlString TextPageContent => this.Value<IHtmlString>("textPageContent");
+		public Newtonsoft.Json.Linq.JToken TextPageContent => this.Value<Newtonsoft.Json.Linq.JToken>("textPageContent");
 
 		///<summary>
 		/// TextPage Title: Title

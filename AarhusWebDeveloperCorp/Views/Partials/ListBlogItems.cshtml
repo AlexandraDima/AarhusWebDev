@@ -9,10 +9,11 @@
 
 	@foreach (var item in selection)
 	{
-	     <!-- post -->
-              <div class="post col-xl-6">
-                <div class="post-thumbnail">
-                    <a href="@item.Url">
+	       
+	       <div class="col-md-4">
+        
+            <div>
+             <a href="@item.Url">
                 @{
                 var articleImage = item.Value<IPublishedContent>("articleImage");
                 if (articleImage != null)
@@ -23,16 +24,19 @@
                 }
 
                 </a>
-                </div>
-                <div class="post-details">
-                  <div class="post-meta d-flex justify-content-between">
-                   <a href="@item.Url">
-                    <h3 class="h4">@item.Name</h3></a>
-                    <p class="text-muted">@item.Value("articleTeaser")</p>
-                  </div>
-                
-                </div>
-              </div>
+            </div>
+            <div>
+            <a href="@item.Url"><h2>@item.Name</h2></a>
+            <div class="lead mb-0">
+                 <p>@item.Value("articleTeaser")</p>
+            </div>
+           
+            </div>
+     
+        </div>
+        
+       
+               
 		
 		
 	}

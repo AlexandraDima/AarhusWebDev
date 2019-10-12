@@ -19,8 +19,8 @@
 	foreach (var item in selection)
 	{
 	     <!-- post -->
-              <div class="post col-xl-6">
-                <div class="post-thumbnail">
+              <div class="col-md-6 mx-auto">
+                <div>
                     <a href="@item.Url">
                 @{
                 var projectImage = item.Value<IPublishedContent>("projectImage");
@@ -33,13 +33,9 @@
 
                 </a>
                 </div>
-                <div class="post-details">
-                  <div class="post-meta d-flex justify-content-between">
+                <div class="mx-auto pb-3">
                    <a href="@item.Url">
                     <h3 class="h4">@item.Name</h3></a>
-                
-                  </div>
-                
                 </div>
               </div>
 		

@@ -1,7 +1,35 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@using ContentModels = Umbraco.Web.PublishedModels;
 @{
 	Layout = "master.cshtml";
 }
 
-@* the fun starts here *@
-<h1>@Model.Value("textPageTitle")</h1>
+
+
+
+ <!-- Page Header -->
+  <header class="mastheadPost" style="background-color:#03387C">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>@Model.Value("textPageTitle")</h1>
+        
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 p-5 mb-5 mx-auto bg-light">
+      
+         @Html.GetGridHtml(Model, "textPageContent")
+        </div>
+      </div>
+    </div>
+  </article>

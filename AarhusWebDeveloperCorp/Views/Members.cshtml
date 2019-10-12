@@ -30,7 +30,7 @@ var members = memberService.GetMembersByGroup("Active");
             </div>
             <div>
 
-                @*@{
+                @{
                     string imageUdi = member.GetValue<string>("photo");
                     string imageUrl = Umbraco.PublishedContent(Udi.Parse(imageUdi)).Url;
                     if (!string.IsNullOrEmpty(imageUrl))
@@ -38,7 +38,7 @@ var members = memberService.GetMembersByGroup("Active");
 
                         <img src="@imageUrl" />
                     }
-                }*@
+                }
 
 
             </div>
